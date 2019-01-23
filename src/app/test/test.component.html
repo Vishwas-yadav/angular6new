@@ -7,4 +7,27 @@
 <h4>{{greet}}</h4>
 <input #myinput type="text">
 <button (click)="logmsg(myinput.value)">log</button>
+<br>
+<br>
+<h2 *ngIf="displayName ; else elseBlock">this is text for ngIf</h2>
+<ng-template #elseBlock>
+  <h2>something is hidden</h2>
+</ng-template>
+<hr>
+<input [(ngModel)]="color1" type="text" placeholder="type color">
+<div [ngSwitch]="color1">
+  <div *ngSwitchCase="'Red'" [style.color]="'Red'">Red color</div>
+  <div *ngSwitchCase="'Blue'" [style.color]="'Blue'">Blue color</div>
+  <div *ngSwitchCase="'Black'" [style.color]="'Black'">Black color</div>
+  <div *ngSwitchDefault>Type any one:Black,Red,Blue</div>
+</div>
+<hr>
+<h4>ngFor section</h4>
+<div *ngFor="let i of fruits; index as a">
+  <h3>{{a+1}} {{i}}</h3>
+</div>
+<hr>
+
+
+
 
