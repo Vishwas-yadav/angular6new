@@ -23,8 +23,8 @@
 </div>
 <hr>
 <h4>ngFor section</h4>
-<div *ngFor="let i of fruits; index as a">
-  <h3>{{a+1}} {{i}}</h3>
+<div *ngFor="let i of fruits; index as a; first as f; odd as o">
+  <h3>{{a+1}} {{i}}  {{f}}  {{o}}</h3>
 </div>
 <hr>
 
