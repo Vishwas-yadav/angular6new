@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-test',
@@ -12,6 +12,7 @@ export class TestComponent implements OnInit {
   public displayName=false;
   public color1;
   public fruits=["Orange","Apple","Banana","Papaya","Grapes"];
+  @Input() public parentData;
 
   constructor() { }
 
